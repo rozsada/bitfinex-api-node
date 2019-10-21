@@ -30,12 +30,17 @@ rest.transfer({
     debug(`transfer confirmed: ${res}`)
   })
 
-// withdraw
+
+ // withdraw
 rest.withdraw({
-  wallet: 'exchange',
-  method: 'bitcoin',
-  amount: 2,
-  address: '1MUz4VMYui5qY1mxUiG8BQ1Luv6tqkvaiL'
+        walletselected: 'exchange', 
+        withdraw_type: coin.toLowerCase(),// ! toLowerCase(), e.g 'eos'
+        amount: amount.toString(),// ! toString(), e.g '15'
+        address: your_coin_address
+})
+  .then((res) => {
+    debug(`withdraw confirmed: ${res}`)
+  })
 })
   .then((res) => {
     debug(`withdraw confirmed: ${res}`)
