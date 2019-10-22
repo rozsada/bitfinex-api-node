@@ -32,9 +32,9 @@ rest.transfer({
 
 // withdraw
 rest.withdraw({
-  wallet: 'exchange',
-  method: 'bitcoin',
-  amount: 2,
+  walletselected: 'exchange',
+  withdraw_type: 'bitcoin',
+  amount: '2',
   address: '1MUz4VMYui5qY1mxUiG8BQ1Luv6tqkvaiL'
 })
   .then((res) => {
